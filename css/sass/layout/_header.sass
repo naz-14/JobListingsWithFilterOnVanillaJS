@@ -1,0 +1,80 @@
+// Hay que hacer un div absoluto con la imagen del header asi no hay qu emovel el contenedor  de la barra de filtros y puede ir creciendo sin problema
+.header-background
+  position: absolute
+  background: url(../images/bg-header-mobile.svg) $cyanOscuro
+  top: 0
+  left: 0
+  right: 0
+  z-index: -2000
+  height: 150px
+  background-position: cover
+  background-repeat: no-repeat
+  background-size: 100%
+  @media screen and ( min-width: 1280px )
+    background: url(../images/bg-header-desktop.svg) $cyanOscuro
+    
+
+.site-header
+  margin-top: 8em
+  margin-bottom: .5em
+  .filter-bar
+    .container
+      display: flex
+      justify-content: space-between
+      background: #ffffff
+      padding: .5em
+      border: 1px solid black
+      border-radius: 12px
+      &.hide
+        display: none
+      .tagsContainer
+        flex-basis: 70%
+        width: 100%
+        display: inline-flex
+        flex-wrap: wrap
+        .sectionContainer
+          display: flex
+          flex-wrap: wrap
+          margin-top: .5em
+          align-items: center
+          .tagContainer
+            margin: .3em
+            display: flex
+            align-items: center
+            max-width: 100%
+            .tag
+              color: $cyanOscuro
+              padding: .3em .3em .3em .5em
+              background-color: $desaturatedCyan
+              font-size: 15px
+              border-radius: 10px 0 0 10px
+              letter-spacing: 1
+            button
+              background-color: transparent
+              border: none
+              display: flex
+              align-items: center
+              background-color: $cyanOscuro
+              padding: .39em
+              border-radius: 0 10px 10px 0
+              cursor: pointer
+              &:hover
+                background-color: $veryDarkCyan
+              img
+                width: 100%
+      .clearAllContainer
+        flex-basis: 30%
+        align-self: center
+        display: flex
+        justify-content: flex-end
+        button
+          border: none
+          background-color: transparent
+          padding: .39em
+          border-radius: 10px 10px 10px 10px
+          color: gray
+          cursor: pointer
+          &:hover
+            color: $cyanOscuro
+            text-decoration: underline
+        

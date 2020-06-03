@@ -1,0 +1,24 @@
+
+$desaturatedCyan: #cae9eb
+$lightGrayish: hsl(180, 8%, 52%)
+$cyanOscuro: #64a1a2
+$veryDarkCyan: hsl(180, 14%, 20%)
+html 
+  box-sizing: border-box
+
+*, *:before, *:after 
+  box-sizing: inherit
+  
+body
+  font-family: 'Spartan', sans-serif
+h1,h2,h3,h4,p,span,li,ul
+  margin: 0
+  padding: 0
+.container
+  max-width: 330px
+  margin: 0 auto
+  @media screen and ( min-width: 1280px )
+    max-width: 1110px
+@import ../layout/_header
+@import _normalize
+@import ../layout/_grid

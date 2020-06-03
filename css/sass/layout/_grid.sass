@@ -1,0 +1,112 @@
+.grid
+  padding: 3em 0
+  .grid-element
+    display: flex
+    flex-direction: column
+    margin: 0 0 3em 0
+    border-radius: 10px
+    padding: 1.5em 1em
+    position: relative
+    -webkit-box-shadow: 0px 8px 10px -3px $cyanOscuro;
+    -moz-box-shadow: 0px 8px 10px -3px $cyanOscuro;
+    box-shadow: 0px 8px 10px -3px $cyanOscuro
+    &.featured
+      border-left: 5px solid #64a1a2
+    &.hide 
+      display: none
+    @media screen and ( min-width: 1280px )
+      flex-direction: row
+    .details-container
+      flex-basis: 70%
+      border-bottom: 1px solid $lightGrayish
+      margin-top: 1em
+      @media screen and ( min-width: 1280px )
+        margin: 0
+        flex-basis: 40%
+        border: none
+        display: flex
+        align-items: center
+      .img-container
+        position: absolute
+        width: 45px
+        top: -1.5em
+        @media screen and ( min-width: 1280px )
+          position: relative
+          width: 90px
+          top: 0
+          margin: 1.3em
+        img
+          max-width: 100%
+
+      .details-content
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        .company-container
+          color: #64a1a2
+          font-size: 15px
+          display: flex
+          .company
+            font-weight: 700
+          .pops
+            margin-left: 1em
+            display: inline-block
+            text-transform: uppercase
+            &:first-of-type
+              margin-left: .5em
+            .pop
+              padding: .4em .6em
+              color: #ffffff
+              border-radius: 15px
+              &.new-pop
+                background-color: #64a1a2
+              &.featured-pop
+                background-color: $veryDarkCyan
+    .tittle
+      a 
+        text-decoration: none
+        h1
+          color: $veryDarkCyan
+          font-size: 17px
+          font-weight: 700
+          padding: .5em 0
+      &:hover
+        h1
+          color: $cyanOscuro
+    .date
+      padding-bottom: 1em
+      @media screen and ( min-width: 1280px )
+        padding: 0
+      ul
+        display: flex
+        li 
+          margin-left: .5em
+          list-style: none
+          color: $lightGrayish
+          &:first-of-type
+            margin: 0
+    .tags-container
+      flex-basis: 30%
+      padding-top: 1em
+      @media screen and ( min-width: 1280px )
+        flex-basis: 60%
+        padding: 0
+        align-self: center
+        display: flex
+        justify-content: flex-end
+      .tag
+        font-size: 14px
+        display: inline-block
+        color: #64a1a2
+        font-weight: 700
+        padding: 1em 1.5em
+        cursor: pointer
+        border-radius: 15px
+        &:hover
+          color: #ffffff
+          background-color: $cyanOscuro
+          
+      
+
+
+
