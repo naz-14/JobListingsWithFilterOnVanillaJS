@@ -164,6 +164,8 @@
       languageFilters = [],
       toolFilters = [],
       barFiltersArray = [];
+
+
     //Contstants for get each content from the entries list
     const roles = function () {
       const badRoles = entries.map(function (entrie) {
@@ -205,6 +207,8 @@
       const limpio = [...new Set(arraySucio)];
       return limpio;
     };
+
+
     //Add event listeners for tags
     tags.forEach(function (tag) {
       tag.addEventListener("click", grabTag);
@@ -217,6 +221,7 @@
       addCorrespondentFilter(filterTag);
       window.scrollTo(0, 0);
     }
+
     // Adding the tag to correspendent filter array
     function addCorrespondentFilter(filterTag) {
       let filterIs;
@@ -345,6 +350,7 @@
             .addEventListener("click", clearAllF);
           document.querySelector("#clearAll").innerHTML = "Clear";
         }
+
         const buttonsOfTags = document.querySelectorAll(
           "#filter-bar .container .tagContainer button"
         );

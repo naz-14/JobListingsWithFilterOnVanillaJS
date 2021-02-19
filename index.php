@@ -104,19 +104,15 @@
                 "tools" => $tools
               ];
             ?>
-            <?php foreach ($tags as $tag) {
+            <?php foreach ($tags as $key => $tag) {
               if (gettype($tag)=="array") {
-                foreach ($tag as $key) {
-                  echo '<p class="tag">';
-                  echo $key;
-                  echo '</p>';
-                }
+                foreach ($tag as $value) { ?>
+                  <p class="tag" data-tagType="<?php echo strtolower($key); ?>"> <?php echo $value; ?> </p>
+                <?php }
               }
-              else{
-                echo '<p class="tag">';
-                echo $tag;
-                echo '</p>';
-              }
+              else{ ?>
+                  <p class="tag" data-tagType="<?php echo strtolower($key); ?>"> <?php echo $tag; ?> </p>
+              <?php }
             }?>
           </div>
         </div><!--Grid element-->
